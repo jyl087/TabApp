@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { ListViewEventData, RadListView, SwipeActionsEventData} from "nativescript-ui-listview";
-
+import { ObservableArray } from "@nativescript/core";
 import { Item } from './item'
 import { ItemService } from './item.service'
 
@@ -9,7 +9,8 @@ import { ItemService } from './item.service'
   templateUrl: './items.component.html',
 })
 export class ItemsComponent implements OnInit {
-  items: Array<Item>
+  //items: Array<Item>
+  items: ObservableArray<Item>
 
   constructor(private itemService: ItemService) {}
 
