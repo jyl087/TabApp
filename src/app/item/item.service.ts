@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core'
-
+import { ObservableArray } from '@nativescript/core'
 import { Item } from './item'
 
 @Injectable({
@@ -32,7 +32,7 @@ export class ItemService {
   )
 
   getItems(): Array<Item> {
-    return this.items
+    return new ObservableArray( this.items);
   }
 
   getItem(id: number): Item {
