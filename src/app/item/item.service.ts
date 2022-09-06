@@ -31,7 +31,7 @@ export class ItemService {
     { id: 25, name: 'Masip', role: 'Goalkeeper' }
   )
 
-  getItems(): Array<Item> {
+  getItems(): ObservableArray<Item> {
     return new ObservableArray( this.items);
   }
 
